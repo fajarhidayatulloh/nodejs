@@ -1,0 +1,22 @@
+{% extends 'template.html' %}
+
+{% block title %} Form Input {% endblock %}
+
+{% block content %} 
+	<form action="" method="POST" accept-charset="utf-8">
+		<table>
+			<tr>
+				<td>Nama</td>
+				<td><input type="text" name="nama"></td> 
+		 	</tr> 
+		 	<tr>
+		 		<td>alamat</td>
+		 		<td><textarea name="alamat"></textarea></td> 
+		 	</tr>
+		 	<tr>
+		 		<td></td>
+		 		<td><input type="submit" value="Input"></td>
+		 	</tr>
+	 	</table>
+	</form>
+{% endblock %}

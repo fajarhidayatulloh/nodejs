@@ -1,0 +1,28 @@
+{% extends 'template.html' %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %} 
+	<h1>{{title}}</h1><hr>
+
+	<table class="display" id="example">
+		<thead>
+			<tr>
+				<th><center>NPM</center></th>
+				<th><center>Nama</center></th>
+				<th><center>Alamat</center></th>
+				<th><center>Aksi</center></th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for d in data %}
+			<tr>
+				<td><center>{{d.npm}}</center></td>
+				<td><center>{{d.nama}}</center></td>
+				<td><center>{{d.alamat}}</center></td>
+				<td><center><a href="/update/{{d.npm}}" class="btn btn-primary" title="Edit">Edit</a>||<a href="/delete/{{d.npm}}" class="btn btn-danger" title="Delete">Delete</a></center></td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
